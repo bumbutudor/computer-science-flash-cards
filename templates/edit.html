@@ -9,16 +9,16 @@
                     <input type="radio" name="type" value="1"
                            id="general" {{ "checked" if (card.type == 1) else "" }} />
                 </label>
-                <label for="code" class="btn btn-default btn-lg">Code &nbsp;
+                <label for="code" class="btn btn-default btn-lg">Rezolvare &nbsp;
                     <input type="radio" name="type" value="2" id="code" {{ "checked" if (card.type == 2) else "" }} />
                 </label>
             </div>
             <div class="form-group">
-                <label for="front">Front of Card</label>
+                <label for="front">Fața biletului</label>
                 <input type="text" name="front" id="front" class="form-control" value="{{ card.front|e }}">
             </div>
             <div class="form-group">
-                <label for="back">Back of Card</label>
+                <label for="back">Spatele biletului</label>
                 <textarea name="back"
                           class="form-control"
                           id="back"
@@ -30,14 +30,14 @@
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" name="known"
-                               value="1" {{ "checked" if (card.known == 1) else "" }} /> Known
+                               value="1" {{ "checked" if (card.known == 1) else "" }} /> Deja știu!
                         </label>
                     </div>
                 </div>
                 <div class="col-xs-6 text-right">
                     <a href="{{ url_for('delete', card_id=card.id) }}" class="btn btn-danger btn-xs">
                         <i class="fa fa-trash"></i>
-                        Remove
+                        Șterge
                     </a>
                 </div>
             </div>
@@ -45,7 +45,7 @@
             <hr />
             <div class="form-group">
                 <input type="hidden" name="card_id" value="{{ card.id|e }}" />
-                <button type="submit" class="saveButton btn btn-lg btn-primary">Save</button>
+                <button type="submit" class="saveButton btn btn-lg btn-primary">Salvează</button>
             </div>
         </form>
     </div>
