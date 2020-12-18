@@ -31,7 +31,7 @@
     </div>
 
     <div class="page-header">
-        <h2>{{ cards|length }} Bilet {{ '' if (cards|length == 1) else 'e' }}</h2>
+        <h2>{{ cards|length }} Bilet{{ '' if (cards|length == 1) else 'e' }}</h2>
     </div>
     <div class="btn-group btn-group-md" role="group" aria-label="filters">
         <a href="{{ url_for('filter_cards', filter_name="all") }}" class="btn btn-{{ "primary" if filter_name == "all" else "default" }}">Toate</a>
