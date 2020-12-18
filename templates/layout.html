@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>CS Flash Cards</title>
+    <title>AI cards</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -23,11 +23,11 @@
                             {% if not session.logged_in %}
                                 <li><a href="{{ url_for('login') }}">Logare</a></li>
                             {% else %}
-                                <li><a href="{{ url_for('cards') }}">bilete</a></li>
-                                <li><a href="{{ url_for('general') }}">general</a></li>
-                                <li><a href="{{ url_for('code') }}">rezolvare</a></li>
+                                <li><a href="{{ url_for('cards') }}">Bilete</a></li>
+                                <li><a href="{{ url_for('general') }}">Întrebări generale</a></li>
+                                <li><a href="{{ url_for('code') }}">Probleme de programare</a></li>
                                 <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                                <li><a href="{{ url_for('logout') }}">ieșire</a></li>
+                                <li><a href="{{ url_for('logout') }}">Ieșire</a></li>
                             {% endif %}
                         </ul>
                     </div>
